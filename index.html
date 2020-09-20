@@ -1,0 +1,594 @@
+<!doctype html><html><head><style>p,h1,h2,h3,h4,h5,h6,SPAN, A, BODY, HTML, DIV, iframe {
+font-family: 'Google Sans', Roboto, Arial, monospace !important;
+cursor: url(https://lettuce-it.tribe.so/api/v1/posts/5ecf50168c42dd699c00ef95/download/5ecf50168c42dd699c00ef96),auto;
+}
+A[id="jsitor-view-source"] {
+display: block
+}
+#currentTime {
+  font-size: 15px !important;
+ position: fixed;
+  top: -8px;
+  left: 48%;
+  text-align: center !important;
+  font-family: 'Google Sans', Roboto, Arial, Segoe UI, monospace !important;
+  font-weight: 400;
+  color: #fff;
+}
+</style></head><body>
+      <script nomodule src="https://unpkg.com/browser-es-module-loader/dist/babel-browser-build.js"></script>
+      <script nomodule src="https://unpkg.com/browser-es-module-loader"></script>
+    <h1 style="font-size:20px; z-index:99999 !important;" id="currentTime"></h1>
+<div class="parent">
+	<div style="z-index: 99999;" class="child"><span id="indicator"></span></div>
+</div>
+<script>
+	window.addEventListener('online', function(e) {
+  document.getElementById('indicator').innerHTML = '';
+});
+
+window.addEventListener('offline', function(e) {
+  document.getElementById('indicator').innerHTML = 'You are offline. Launch <a style="font-size: 15px; color: ff0a0a;" href="#mzodalDINO">dino game</a>';
+});
+</script>
+<audio autoplay>
+	<source src="https://cdn.discordapp.com/attachments/717303011680059442/720922798884913222/Lettuce_-_tah_boot_noise.m4a"
+		type="audio/mpeg">
+</audio>
+<div id="loader-screen">
+	<div id='loader'>
+		<div id="bg"></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+		<div id='circle'></div>
+	</div>
+	<style>
+		#splashIMG {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 99999;
+		}
+	</style>
+	<img src="https://media1-production-mightynetworks.imgix.net/asset/11652877/beta.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&fit=crop&crop=entropy&ar=1.3333333333333333" alt="splash" id="splashIMG" width="1000" height="800">
+
+	<p id="loading"
+		style="text-align:center !important;position: fixed; right:0%; left: 0%; top: 53%; font-size: 20px; font-family: 'Segoe UI', Google Sans, Roboto, Arial, monospace;">
+		<b>Starting up...</b></p>
+</div>
+<style>
+	#loader,
+	#circle,
+	#bg,
+	#loading,
+	#loader-screen {
+		animation: css 0s 15s forwards;
+	}
+
+	@keyframes css {
+		to {
+			visibility: hidden;
+		}
+	}
+
+	#splashIMG {
+		animation: css 0s 4s forwards;
+	}
+
+	@keyframes css {
+		to {
+			visibility: hidden;
+		}
+	}
+
+	#loader-screen {
+		background-color: #af0a0a;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 99999;
+	}
+
+	#loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 50px;
+		height: 50px;
+		margin: auto;
+	}
+
+	#loader #circle {
+		position: absolute;
+		width: 38px;
+		height: 38px;
+		opacity: 0;
+		transform: rotate(225deg);
+		animation-iteration-count: infinite;
+		animation-name: orbit;
+		animation-duration: 5.5s;
+	}
+
+	#loader #circle:after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		border-radius: 5px;
+		background: #000;
+	}
+
+	#loader #circle:nth-child(1) {
+		animation-delay: 120ms;
+	}
+
+	#loader #circle:nth-child(2) {
+		animation-delay: 240ms;
+	}
+
+	#loader #circle:nth-child(3) {
+		animation-delay: 480ms;
+	}
+
+	#loader #circle:nth-child(4) {
+		animation-delay: 720ms;
+	}
+
+	#loader #circle:nth-child(5) {
+		animation-delay: 960ms;
+	}
+
+	#loader #bg {
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		margin-left: -16px;
+		margin-top: -16px;
+		border-radius: 13px;
+		animation: bgg 16087ms ease-in alternate infinite;
+	}
+
+	@keyframes orbit {
+		0% {
+			transform: rotate(225deg);
+			opacity: 1;
+			animation-timing-function: ease-out;
+		}
+
+		7% {
+			transform: rotate(345deg);
+			animation-timing-function: linear;
+		}
+
+		30% {
+			transform: rotate(455deg);
+			animation-timing-function: ease-in-out;
+		}
+
+		39% {
+			transform: rotate(690deg);
+			animation-timing-function: linear;
+		}
+
+		70% {
+			transform: rotate(815deg);
+			opacity: 1;
+			animation-timing-function: ease-out;
+		}
+
+		75% {
+			transform: rotate(945deg);
+			animation-timing-function: ease-out;
+		}
+
+		76% {
+			transform: rotate(945deg);
+			opacity: 0;
+		}
+
+		100% {
+			transform: rotate(945deg);
+			opacity: 0;
+		}
+	}
+</style>
+<style>
+	.parent {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.child {
+		position: fixed;
+		right: 20%;
+		font-family: 'Google Sans', Roboto, Arial;
+		font-size: 15px;
+		color: #cf0a0a;
+	}
+</style>
+<meta name="theme-color" content="#000000" />
+<p title="sys version: 2.7.0" style="color:#fff; position: fixed; top: -10px; left: 0;">TAH beta</p>
+<div style="position:fixed;" class="oatmeal-link">
+	<a style="width:99%;border:1px solid;position:fixed; bottom:10px; text-align:center; title=" . . ."
+		href="#mzodalSG">. . .</a>
+</div>
+<script>
+	var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+}
+</script>
+<style>
+	/* Chrome, Safari and Opera syntax */
+	:-webkit-full-screen {}
+
+	/* Firefox syntax */
+	:-moz-full-screen {}
+
+	/* IE/Edge syntax */
+	:-ms-fullscreen {}
+
+	/* Standard syntax */
+	:fullscreen {}
+
+	/* Style the button */
+	button {
+		border: none;
+		background-color: transparent;
+
+	}
+</style>
+<button
+			onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+<div id="czontent">
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: auto;
+			background-color: #af0a0a;
+			color: black;
+		}
+
+		li {
+			float: left;
+
+			overflow: auto;
+		}
+
+		li a {
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			overflow: auto;
+
+		}
+
+		li a:hover {
+			background-color: #000;
+			color: white;
+			overflow: auto;
+		}
+	</style>
+	</head>
+
+	<body>
+		<div style="max-width: 100%; overflow: scroll;" class="appList">
+			<ul style="max-width:100%; overflow: auto;">
+				<li title="meme song"><a href="#mzodal1">meme song</a></li>
+				<li title="CSurf Browser"><a href="#mzodal2">CSurf Browser</a></li>
+				<li title="Lettuce.it Update Log"><a href="#mzodal3">Lettuce.it update log</a></li>
+				<li title="Lettuce.it Group Chat"><a href="#mzodal4">Lettuce.it Group Chat</a></li>
+				<li title="KidzNet"><a href="#mzodal5">KN</a></li>
+				<li title="Vaporize"><a href="#mzodal6">Music</a></li>
+				<li title="OS Credits"><a href="#mzodalCREDITS">Credits</a></li>
+			</ul>
+		</div>
+		<div id="mzodal1"><a style="z-index: 99998; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://www.youtube-nocookie.com/embed/5pUzsJ-MYiI?controls=0" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>family guy party rock album - youtube<h1 style="font-size:20px;"
+				id="currentTime"></h1><button
+				onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodal2"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://jsitor.com/p/Y9RGR1Y51" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>CSurf Browser<h1 style="font-size:20px;" id="currentTime"></h1><button
+				onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodal3"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://jsitor.com/p/dEVmMlKCr" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>Lettuce.it update log<h1 style="font-size:20px;" id="currentTime"></h1><button
+					onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodal4"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://deadsimplechat.com/IU6XNPvX2O" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>Lettuce.it Group Chat<h1 style="font-size:20px;" id="currentTime"></h1><button
+						onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodal5"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://net.kidzsearch.com" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>KidzNet<h1 style="font-size:20px;" id="currentTime"></h1><button
+										onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodal6"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://www.youtube-nocookie.com/embed/videoseries?list=PL20q2Bgrai_3VXyOcrXa0r0zQh8xVHKJ7"
+				allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>Vaporize - Vaporwave and boards of Canada - YouTube noCookie<h1
+				style="font-size:20px;" id="currentTime"></h1><button
+													onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodalDINO"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://jsitor.com/p/cLil_njw3" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:98%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>Dino Run<h1 style="font-size:20px;" id="currentTime"></h1><button
+														onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodalCREDITS" style="height:40%;width:60%;"><a style="z-index: 99999; position: fixed; top: -1px; right: 0;" href="#">×</a><iframe
+				src="https://jsitor.com/p/HQ3s1Nzsg" allowtransparency="true"
+				style="background-color: #000 !important; color: #af0a0a !important; position:fixed;  left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index: 0;"
+				frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+				scrolling="yes"></iframe>OS Credits<h1 style="font-size:20px;" id="currentTime"></h1><button
+															onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+		<div id="mzodalSG"><a style="z-index: 99999; position: fixed; top: -2px; right: 0;" href="#">×</a>dialog<br><br><p>you are in the beta page, in order to suggest a site, head back to the official version</p><h1 style="font-size:20px;"
+				id="currentTime"></h1><button
+								onclick="openFullscreen();"><img src="https://media1-production-mightynetworks.imgix.net/asset/10829960/fullscreen_-_cropped.png?ixlib=rails-0.3.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max" style="width: 12px; height: 12px; position: fixed; right: 17px; top: 5px; "></button>
+		</div>
+</div>
+<style>
+	[id^=mzodal] {
+		display: none;
+
+		position: fixed;
+		min-height: 3em;
+		min-width: 5em;
+		font-family: 'Google Sans', Roboto, Arial, sans-serif;
+		color: #fff;
+		background-color: #000;
+		height: 100%;
+		Width: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+	}
+
+	input[type=checkbox] {
+		position: absolute;
+		clip: rect(0 0 0 0);
+	}
+
+	#mzodal1:target {
+		display: block;
+		z-index: 999999;
+	}
+
+	#mzodal2:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodal3:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodal4:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodal5:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodal6:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodalDINO:target {
+		display: block;
+		z-index: 99998;
+	}
+
+	#mzodalSG:target {
+		display: block;
+		z-index: 99998;
+		border: 2px solid #af0a0a;
+	}
+
+	#mzodalCREDITS:target {
+		display: block;
+		z-index: 99998;
+			min-height: 3em;
+			min-width: 5em;
+			font-family: 'Google Sans', Roboto, Arial, sans-serif;
+			color: #fff;
+			background-color: #000;
+			height: 40%;
+			Width: 60%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+	}
+
+	[id^=mzodal] a {
+		float: right;
+	}
+
+	a {
+		text-decoration: None;
+		Color: #AF0A0A;
+		z-index: 99999;
+		font-size: 20px;
+	}
+
+	body,
+	html {
+		background-color: #000;
+	}
+
+	.bagel {
+		float: right !important;
+		top: 0px;
+	}
+</style>
+
+
+
+
+
+<style>
+	.dropbtn {
+		background-color: #af0a0a;
+		position: fixed;
+		top: 0;
+		left: 30%;
+		color: black;
+		font-family: 'Google Sans', Roboto, Arial, Comic Sans;
+		font-size: 15px;
+		border: none;
+		cursor: pointer;
+    z-index: 99999;
+	}
+
+	.dropdown {
+		position: fixed;
+		top: 2%;
+		left: 27%;
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: fixed;
+    top: 15px;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 999999;
+	}
+
+	.dropdown-content a {
+		color: #ffffff;
+		background-color: #111;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #af0a0a;
+		color: #000;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+		background-color: #222;
+		color: #fff;
+	}
+</style>
+<div class="dropdown">
+	<button class="dropbtn">Start</button>
+	<div class="dropdown-content">
+		<a href="#mzodal1">meme song</a>
+		<a href="#mzodal2">CSurf Browser</a>
+		<a href="#mzodal3">Lettuce.it Update Log</a>
+		<a href="#mzodal4">Lettuce.it Group Chat</a>
+		<a href="#mzodal5">KN</a>
+		<a href="#mzodal6">Music</a>
+		<a href="#mzodalCREDITS">Credits</a>
+	</div>
+
+</div><script type="text/javascript">window.onload = function () {
+  clock();
+  function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+    if (hour == 0) {
+      hour = 12;
+    }
+    if (TwentyFourHour < 12) {
+      mid = 'am';
+    }
+    document.getElementById('currentTime').innerHTML = hour + ':' + min + ' ' + mid;
+    setTimeout(clock, 1000);
+  }
+}
+
+
+</script></body><html>
